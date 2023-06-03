@@ -15,7 +15,6 @@ pages:
     - rm -rf public
     - mv .public public
     - rm -rf public/update-years.sh
-    - gzip -k -6 $(find public -type f)
   artifacts:
     paths:
       - public

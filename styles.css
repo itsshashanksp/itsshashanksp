@@ -11,7 +11,7 @@ body {
   background-color: #1C1B1F;
   color: #E6E1E5;
   font-family: monospace;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -92,7 +92,8 @@ footer *::selection {
 /* Container styles */
 .primary-container,
 .secondary-container,
-.tertiary-container {
+.tertiary-container,
+.donation-container {
   max-width: 1150px;
   padding: 1rem;
   margin: 1rem auto;
@@ -123,6 +124,30 @@ footer *::selection {
 
 .tertiary-container *::selection {
   background: #EFB8C8;
+}
+
+.donation-container {
+  background-color: #1C1B1F;
+  color: #E6E1E5;
+}
+
+.donation-container pre {
+  background-color: #000000;
+  padding: 1rem;
+  margin-top: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.donation-container *::selection {
+  background: #e8def836;
+}
+
+.donation-container pre::selection ,
+.donation-container pre font::selection,
+.donation-container pre a::selection {
+  background: #e8def823;
 }
 
 /* List styles */
