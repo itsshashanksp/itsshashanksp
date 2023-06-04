@@ -141,13 +141,13 @@ footer *::selection {
 }
 
 .donation-container *::selection {
-  background: #e8def836;
+  background: #e8def82a;
 }
 
 .donation-container pre::selection ,
 .donation-container pre font::selection,
 .donation-container pre a::selection {
-  background: #e8def823;
+  background: #e8def825;
 }
 
 /* List styles */
