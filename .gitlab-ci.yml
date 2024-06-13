@@ -14,7 +14,6 @@ pages:
     - cp -r * .public
     - rm -rf public
     - mv .public public
-    - rm -rf public/update-years.sh
   artifacts:
     paths:
       - public
