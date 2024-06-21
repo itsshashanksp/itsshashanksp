@@ -97,8 +97,7 @@ footer {
   max-width: 1150px;
   padding: 1rem;
   margin: 1rem auto;
-  background-color: #181825;
-  color: #cdd6f4;
+  border-radius: 15px;
 }
 
 .container-header {
@@ -107,6 +106,8 @@ footer {
   margin: -1rem -1rem 1rem -1rem;
   font-weight: bold;
   font-size: 1.5em;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .primary-container {
@@ -149,6 +150,12 @@ footer {
   background-color: rgba(203, 166, 247, 0.1);
 }
 
+/* Terminal setup */
+.violet { color: #CBA6F7; }
+.yellow { color: #F4DDAA; }
+.cyan { color: #89DCEA; }
+.green { color: #A4E3A1; }
+
 .donation-container pre {
   background-color: #1e1e2e;
   padding: 1rem;
@@ -156,10 +163,5 @@ footer {
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
+  border-radius: 15px;
 }
-
-/* Terminal colours */
-.violet { color: #CBA6F7; }
-.yellow { color: #F4DDAA; }
-.cyan { color: #89DCEA; }
-.green { color: #A4E3A1; }
