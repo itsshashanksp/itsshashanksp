@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,37 +11,87 @@
     <header>
       <h1>About me</h1>
       <a href="https://github.com/itsshashanksp"><img src="https://avatars.githubusercontent.com/u/58000677?v=4" alt="GitHub Logo"></a>
+      <button id="themeToggle" title="Toggle Theme">🌓</button>
     </header>
+
     <main>
+      <!-- Terminal-style animated intro -->
+      <section class="terminal-section">
+        <div class="terminal">
+          <p><span class="green">shashank@dev:</span><span class="cyan">~</span>$ <span id="typewriter"></span></p>
+        </div>
+      </section>
+
       <section class="primary-container">
         <div class="container-header" id="about">Hello, I'm Shashank Patil. I'm a part-time developer</div>
         <p>I'm a passionate contributor to Android open-source projects, with a strong focus on Android custom ROM development. I specialize in enhancing mobile ecosystems through performance optimization and feature integration. My expertise extends to the Linux kernel, where I work on system-level improvements, and I have a keen eye for UI/UX design, creating intuitive and visually appealing user experiences that bridge functionality with aesthetics.</p>
       </section>
+
       <section class="secondary-container">
-        <div class="container-header" id="projects">My Projects</div>
-        <ul>
-          <p>My Official & Unofficial projects</p>
-          <li><a href="https://t.me/s/sleepyupdates">Checkout my telegram channel to know about my projects.</a></li>
-        </ul>
+        <div class="container-header" id="projects">My Projects & Supported devices</div>
+
+        <!-- Project cards -->
+        <div class="device-grid">
+          <div class="device-card">
+            <h3>Redmi Note 10 Pro (sweet/sweetin)</h3>
+            <p>Status: <span class="green">Official/Unofficial</span></p>
+            <a href="https://t.me/s/sleepyupdates">Download / Info</a>
+          </div>
+        </div>
       </section>
+
       <section class="tertiary-container">
         <div class="container-header" id="contact">Contact Me</div>
         <p>Just a friendly reminder that I may not be able to respond to every message, especially if it's irrelevant or doesn't add value to our conversation.</p>
         <ul>
-          <li><a href="9945shashank@gmail.com">E-Mail</a></li>
+          <li><a href="mailto:9945shashank@gmail.com">E-Mail</a></li>
           <li><a href="https://t.me/itsshashanksp">Telegram</a></li>         
         </ul>
         <p>You can also find me on other social media platforms through my 
-        <a href="https://www.instagram.com/itsshashanksp">Instagram</a> ,<a href="https://x.com/itsshashanksp">X</a> & <a href="https://www.linkedin.com/in/shashankgouda-patil-603a5a33a">LinkedIn</a>.</p>
-      </section>
-</pre>
-<!-- END: Rip codestyle -->
+        <a href="https://www.instagram.com/itsshashanksp">Instagram</a>, <a href="https://x.com/itsshashanksp">X</a> & <a href="https://www.linkedin.com/in/shashankgouda-patil-603a5a33a">LinkedIn</a>.</p>
       </section>
     </main>
+
     <footer>
       <p>&copy; 2024 Shashank Patil</p>
       <p>You can find the source of this webpage <a href="https://github.com/itsshashanksp/itsshashanksp">here</a>.</p>
       <p>This webpage is licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+      const messages = [
+        "whoami",
+        "I'm Shashank Patil, Android ROM dev \uD83E\uDE20",
+        "Kernel tinkerer \uD83E\uDDEC | UI/UX explorer \uD83C\uDFA8"
+      ];
+
+      let line = 0, char = 0, target = document.getElementById("typewriter");
+
+      function typeLine() {
+        if (line >= messages.length) return;
+        if (char < messages[line].length) {
+          target.innerHTML += messages[line].charAt(char++);
+          setTimeout(typeLine, 50);
+        } else {
+          target.innerHTML += "<br><span class='green'>shashank@dev:</span><span class='cyan'>~</span>$ ";
+          line++; char = 0;
+          setTimeout(typeLine, 700);
+        }
+      }
+
+      window.onload = typeLine;
+
+      const toggle = document.getElementById("themeToggle");
+      const body = document.body;
+      const theme = localStorage.getItem("theme");
+
+      if (theme === "neon") body.classList.add("neon-theme");
+
+      toggle.onclick = () => {
+        body.classList.toggle("neon-theme");
+        localStorage.setItem("theme", body.classList.contains("neon-theme") ? "neon" : "default");
+      };
+    </script>
   </body>
 </html>

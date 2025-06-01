@@ -13,6 +13,7 @@ body {
   font-family: monospace;
   font-size: 17px;
   line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -164,4 +165,74 @@ footer {
   word-wrap: break-word;
   word-break: break-all;
   border-radius: 15px;
+}
+
+/* Terminal intro styles */
+.terminal-section {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  font-family: monospace;
+  padding: 1rem;
+  margin: 2rem auto;
+  border: 2px solid #89DCEA;
+  border-radius: 15px;
+  max-width: 1150px;
+}
+
+.terminal {
+  font-size: 1.1rem;
+  white-space: pre;
+}
+
+/* Theme toggle button */
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #181825;
+}
+
+/* Neon theme */
+.neon-theme {
+  background-color: #0f0f0f;
+  color: #39ff14;
+}
+
+.neon-theme a {
+  color: #00f0ff;
+}
+
+.neon-theme header {
+  background-color: #00ffcc;
+  color: #000;
+}
+
+/* Device cards */
+.device-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.device-card {
+  background-color: #1e1e2e;
+  border: 2px solid #94e2d5;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.device-card:hover {
+  transform: scale(1.05);
+}
+
+.device-card img {
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
 }
