@@ -7,10 +7,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   </head>
+
   <body>
     <header>
       <h1>About me</h1>
-      <a href="https://github.com/itsshashanksp"><img src="https://avatars.githubusercontent.com/u/58000677?v=4" alt="GitHub Logo"></a>
+      <a href="https://github.com/itsshashanksp">
+        <img src="https://avatars.githubusercontent.com/u/58000677?v=4" alt="GitHub Logo">
+      </a>
       <button id="themeToggle" title="Toggle Theme">🌓</button>
     </header>
 
@@ -18,64 +21,122 @@
       <!-- Terminal-style animated intro -->
       <section class="terminal-section">
         <div class="terminal">
-          <p><span class="green">shashank@dev:</span><span class="cyan">~</span>$ <span id="typewriter"></span></p>
+          <p>
+            <span class="green">shashank@dev:</span>
+            <span class="cyan">~</span>$ 
+            <span id="typewriter"></span>
+          </p>
         </div>
       </section>
 
+      <!-- ABOUT -->
       <section class="primary-container">
-        <div class="container-header" id="about">Hello, I'm Shashank Patil. I'm a part-time developer</div>
-        <p>I'm a passionate contributor to Android open-source projects, with a strong focus on Android custom ROM development. I specialize in enhancing mobile ecosystems through performance optimization and feature integration. My expertise extends to the Linux kernel, where I work on system-level improvements, and I have a keen eye for UI/UX design, creating intuitive and visually appealing user experiences that bridge functionality with aesthetics.</p>
+        <div class="container-header" id="about">
+          Hello, I'm Shashank Patil
+        </div>
+
+        <p>
+          I'm an IT Executive with hands-on experience in IT infrastructure support,
+          server management, firewall administration, and advanced troubleshooting.
+          Alongside my professional career, I am an independent Linux kernel developer,
+          actively maintaining my own kernel project and contributing to open-source development.
+          Previously, I was involved in Android custom ROM development, which strengthened
+          my system-level and platform engineering skills.
+        </p>
       </section>
 
+      <!-- CAREER -->
       <section class="secondary-container">
-        <div class="container-header" id="projects">My Projects & Supported devices</div>
+        <div class="container-header" id="career">Career</div>
 
-        <!-- Project cards -->
+        <ul>
+          <li>
+            <strong>IT Executive</strong> – Atlant Global India Inc<br>
+            <span class="muted">
+              Infrastructure support, server & database management, firewall administration,
+              monitoring, and advanced troubleshooting
+            </span>
+          </li>
+
+          <li>
+            <strong>Systems Engineer</strong> – My-Eduate
+          </li>
+
+          <li>
+            <strong>Helpdesk Support Engineer</strong> – My-Eduate
+          </li>
+        </ul>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="secondary-container">
+        <div class="container-header" id="projects">My Projects & Supported Devices</div>
+
         <div class="device-grid">
           <div class="device-card">
-            <h3>Redmi Note 10 Pro (sweet/sweetin)</h3>
-            <p>Status: <span class="green">Official/Unofficial</span></p>
+            <h3>Redmi Note 10 Pro (sweet / sweetin)</h3>
+            <p>Status: <span class="green">Official / Unofficial</span></p>
             <a href="https://t.me/s/sleepyupdates">Download / Info</a>
           </div>
         </div>
       </section>
 
+      <!-- CONTACT -->
       <section class="tertiary-container">
         <div class="container-header" id="contact">Contact Me</div>
-        <p>Just a friendly reminder that I may not be able to respond to every message, especially if it's irrelevant or doesn't add value to our conversation.</p>
+
+        <p>
+          Just a friendly reminder that I may not be able to respond to every message,
+          especially if it's irrelevant or doesn't add value to our conversation.
+        </p>
+
         <ul>
           <li><a href="mailto:9945shashank@gmail.com">E-Mail</a></li>
-          <li><a href="https://t.me/itsshashanksp">Telegram</a></li>         
+          <li><a href="https://t.me/itsshashanksp">Telegram</a></li>
         </ul>
-        <p>You can also find me on other social media platforms through my 
-        <a href="https://www.instagram.com/itsshashanksp">Instagram</a>, <a href="https://x.com/itsshashanksp">X</a> & <a href="https://www.linkedin.com/in/shashankgouda-patil-603a5a33a">LinkedIn</a>.</p>
+
+        <p>
+          You can also find me on
+          <a href="https://www.instagram.com/itsshashanksp">Instagram</a>,
+          <a href="https://x.com/itsshashanksp">X</a> &
+          <a href="https://www.linkedin.com/in/shashankgouda-patil-603a5a33a">LinkedIn</a>.
+        </p>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2024 Shashank Patil</p>
-      <p>You can find the source of this webpage <a href="https://github.com/itsshashanksp/itsshashanksp">here</a>.</p>
-      <p>This webpage is licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+      <p>
+        Source code available
+        <a href="https://github.com/itsshashanksp/itsshashanksp">here</a>.
+      </p>
+      <p>
+        Licensed under
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- SCRIPTS -->
     <script>
       const messages = [
         "whoami",
-        "I'm Shashank Patil, Android ROM dev \uD83E\uDE20",
-        "Kernel tinkerer \uD83E\uDDEC | UI/UX explorer \uD83C\uDFA8"
+        "I'm Shashank Patil, IT Executive 💻",
+        "Linux kernel maintainer 🧬 | Open-source enthusiast"
       ];
 
-      let line = 0, char = 0, target = document.getElementById("typewriter");
+      let line = 0, char = 0;
+      const target = document.getElementById("typewriter");
 
       function typeLine() {
         if (line >= messages.length) return;
+
         if (char < messages[line].length) {
           target.innerHTML += messages[line].charAt(char++);
           setTimeout(typeLine, 50);
         } else {
           target.innerHTML += "<br><span class='green'>shashank@dev:</span><span class='cyan'>~</span>$ ";
-          line++; char = 0;
+          line++;
+          char = 0;
           setTimeout(typeLine, 700);
         }
       }
@@ -90,7 +151,10 @@
 
       toggle.onclick = () => {
         body.classList.toggle("neon-theme");
-        localStorage.setItem("theme", body.classList.contains("neon-theme") ? "neon" : "default");
+        localStorage.setItem(
+          "theme",
+          body.classList.contains("neon-theme") ? "neon" : "default"
+        );
       };
     </script>
   </body>
