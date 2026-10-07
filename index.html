@@ -1,161 +1,233 @@
+```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>itsshashanksp</title>
-    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/58000677?v=4">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shashank Patil | Systems • Backend • DevOps</title>
+
+    <meta
+        name="description"
+        content="Shashank Patil — IT Infrastructure, Linux, Backend Development, Automation and DevOps."
+    >
+
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="https://avatars.githubusercontent.com/u/58000677?v=4"
+    >
+
     <link rel="stylesheet" href="styles.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-  </head>
+</head>
 
-  <body>
-    <header>
-      <h1>About me</h1>
-      <a href="https://github.com/itsshashanksp">
-        <img src="https://avatars.githubusercontent.com/u/58000677?v=4" alt="GitHub Logo">
-      </a>
-      <button id="themeToggle" title="Toggle Theme">🌓</button>
-    </header>
+<body>
 
-    <main>
-      <!-- Terminal-style animated intro -->
-      <section class="terminal-section">
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            <span class="prompt">~/</span>shashank
+        </a>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#journey">Journey</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            ◐
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section id="home" class="hero">
+
+    <div class="hero-container">
+
         <div class="terminal">
-          <p>
-            <span class="green">shashank@dev:</span>
-            <span class="cyan">~</span>$ 
-            <span id="typewriter"></span>
-          </p>
+
+            <div class="terminal-bar">
+
+                <div class="terminal-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="terminal-title">
+                    shashank@dev: ~
+                </span>
+
+            </div>
+
+            <div class="terminal-body">
+
+                <p>
+                    <span class="green">shashank@dev</span>
+                    <span class="cyan">:</span>
+                    <span class="blue">~</span>
+                    <span>$</span>
+                    <span id="typewriter"></span>
+                </p>
+
+                <p class="terminal-output">
+                    IT • Systems • Backend • Automation • DevOps
+                </p>
+
+            </div>
+
         </div>
-      </section>
 
-      <!-- ABOUT -->
-      <section class="primary-container">
-        <div class="container-header" id="about">
-          Hello, I'm Shashank Patil
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                IT • SYSTEMS • DEVELOPMENT
+            </p>
+
+            <h1>
+                Hi, I'm <span>Shashank Patil</span>
+            </h1>
+
+            <p class="hero-description">
+                I work with IT infrastructure, Linux, servers, networking,
+                databases and automation — while building my own backend
+                and configurable software systems.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn primary">
+                    View Projects
+                </a>
+
+                <a
+                    href="https://github.com/itsshashanksp"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn secondary"
+                >
+                    GitHub
+                </a>
+
+            </div>
+
         </div>
 
-        <p>
-          I'm an IT Executive with hands-on experience in IT infrastructure support,
-          server management, firewall administration, and advanced troubleshooting.
-          Alongside my professional career, I am an independent Linux kernel developer,
-          actively maintaining my own kernel project and contributing to open-source development.
-          Previously, I was involved in Android custom ROM development, which strengthened
-          my system-level and platform engineering skills.
-        </p>
-      </section>
+    </div>
 
-      <!-- CAREER -->
-      <section class="secondary-container">
-        <div class="container-header" id="career">Career</div>
+</section>
 
-        <ul>
-          <li>
-            <strong>IT Executive</strong> – Atlant Global India Inc<br>
-            <span class="muted">
-              Infrastructure support, server & database management, firewall administration,
-              monitoring, and advanced troubleshooting
-            </span>
-          </li>
 
-          <li>
-            <strong>Systems Engineer</strong> – My-Eduate
-          </li>
+<!-- ================= ABOUT ================= -->
 
-          <li>
-            <strong>Helpdesk Support Engineer</strong> – My-Eduate
-          </li>
-        </ul>
-      </section>
+<section id="about" class="section">
 
-      <!-- PROJECTS -->
-      <section class="secondary-container">
-        <div class="container-header" id="projects">My Projects & Supported Devices</div>
+    <div class="section-container">
 
-        <div class="device-grid">
-          <div class="device-card">
-            <h3>Redmi Note 10 Pro (sweet / sweetin)</h3>
-            <p>Status: <span class="green">Official / Unofficial</span></p>
-            <a href="https://t.me/s/sleepyupdates">Download / Info</a>
-          </div>
+        <div class="section-heading">
+
+            <span class="section-number">01</span>
+
+            <div>
+                <p class="section-label">ABOUT</p>
+                <h2>Who I am</h2>
+            </div>
+
         </div>
-      </section>
 
-      <!-- CONTACT -->
-      <section class="tertiary-container">
-        <div class="container-header" id="contact">Contact Me</div>
 
-        <p>
-          Just a friendly reminder that I may not be able to respond to every message,
-          especially if it's irrelevant or doesn't add value to our conversation.
-        </p>
+        <div class="about-grid">
 
-        <ul>
-          <li><a href="mailto:9945shashank@gmail.com">E-Mail</a></li>
-          <li><a href="https://t.me/itsshashanksp">Telegram</a></li>
-        </ul>
+            <div class="about-text">
 
-        <p>
-          You can also find me on
-          <a href="https://www.instagram.com/itsshashanksp">Instagram</a>,
-          <a href="https://x.com/itsshashanksp">X</a> &
-          <a href="https://www.linkedin.com/in/shashankgouda-patil-603a5a33a">LinkedIn</a>.
-        </p>
-      </section>
-    </main>
+                <p class="lead">
+                    I'm an IT and systems enthusiast who enjoys working
+                    close to technology — from Linux and Android systems
+                    to servers, networks, databases and backend software.
+                </p>
 
-    <footer>
-      <p>&copy; 2024 Shashank Patil</p>
-      <p>
-        Source code available
-        <a href="https://github.com/itsshashanksp/itsshashanksp">here</a>.
-      </p>
-      <p>
-        Licensed under
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
-      </p>
-    </footer>
+                <p>
+                    My professional experience is focused on IT infrastructure
+                    and system administration. I work with Windows Server,
+                    SQL Server, networking, firewalls, VPNs, monitoring,
+                    backups and technical support.
+                </p>
 
-    <!-- SCRIPTS -->
-    <script>
-      const messages = [
-        "whoami",
-        "I'm Shashank Patil, IT Executive 💻",
-        "Linux kernel maintainer 🧬 | Open-source enthusiast"
-      ];
+                <p>
+                    Outside of my professional work, I've spent years
+                    experimenting with Linux kernels and AOSP-based Android
+                    development. More recently, I've been building
+                    configurable PHP and React applications and exploring
+                    Azure and DevOps.
+                </p>
 
-      let line = 0, char = 0;
-      const target = document.getElementById("typewriter");
+            </div>
 
-      function typeLine() {
-        if (line >= messages.length) return;
 
-        if (char < messages[line].length) {
-          target.innerHTML += messages[line].charAt(char++);
-          setTimeout(typeLine, 50);
-        } else {
-          target.innerHTML += "<br><span class='green'>shashank@dev:</span><span class='cyan'>~</span>$ ";
-          line++;
-          char = 0;
-          setTimeout(typeLine, 700);
-        }
-      }
+            <div class="about-terminal">
 
-      window.onload = typeLine;
+                <div class="code-line">
+                    <span class="green">$</span>
+                    <span>cat current-focus.txt</span>
+                </div>
 
-      const toggle = document.getElementById("themeToggle");
-      const body = document.body;
-      const theme = localStorage.getItem("theme");
+                <div class="code-content">
 
-      if (theme === "neon") body.classList.add("neon-theme");
+                    <div>Linux & Systems</div>
+                    <div>Backend Development</div>
+                    <div>Automation</div>
+                    <div>Generic Software Architecture</div>
+                    <div>Azure & DevOps</div>
 
-      toggle.onclick = () => {
-        body.classList.toggle("neon-theme");
-        localStorage.setItem(
-          "theme",
-          body.classList.contains("neon-theme") ? "neon" : "default"
-        );
-      };
-    </script>
-  </body>
-</html>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience" class="section section-dark">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="section-number">02</span>
+
+            <div>
+                <p class="section-label">EXPERIENCE</p>
+                <h2>IT & Infrastructure</h2>
+            </div>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <div class="experience-header">
+
+                <div>
+
+                    <h3>
+                        IT Executive —
